@@ -1,7 +1,6 @@
 import {
   Button,
   Tile,
-  AspectRatio,
   Row,
   Column,
   FlexGrid,
@@ -9,6 +8,7 @@ import {
 export default function index() {
   // const obj = useAuthProvider()
   // console.log(obj)
+  const basename = process.env.BASE_NAME;
   return (
     <FlexGrid fullWidth>
       <Row>
@@ -33,7 +33,7 @@ export default function index() {
               <figure>
                 <img
                   className="responsive"
-                  src="/train_batch4860.jpg"
+                  src={`${basename}train_batch4860.jpg`}
                   alt="train"
                 />
               </figure>
@@ -44,7 +44,7 @@ export default function index() {
               <figure>
                 <img
                   className="responsive"
-                  src="/train_batch4861.jpg"
+                  src={`${basename}train_batch4861.jpg`}
                   alt="train"
                 />
               </figure>
@@ -55,7 +55,7 @@ export default function index() {
               <figure>
                 <img
                   className="responsive"
-                  src="/train_batch4862.jpg"
+                  src={`${basename}train_batch4862.jpg`}
                   alt="train"
                 />
               </figure>
