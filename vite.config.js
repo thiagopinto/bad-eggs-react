@@ -12,5 +12,11 @@ export default defineConfig(({ mode }) => {
       } 
     },
     plugins: [react()],
+    root: "./",
+    build: {
+      outDir: "dist",
+    },
+    base: "/eggs/",
+    publicDir: "public"
   };
 });
