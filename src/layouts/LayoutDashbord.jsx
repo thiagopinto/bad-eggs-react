@@ -58,7 +58,7 @@ export default function Dashboard() {
               <HeaderName as={Link} to="/" prefix="">
                 <img
                   className="cds--aspect-ratio cds--aspect-ratio--1x1 image-logo"
-                  src="bad_egg_mini.jpg"
+                  src="bad_egg_mini.png"
                   alt="logo"
                 />
                 BadEggs<small>[Zoonoses]</small>
