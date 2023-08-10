@@ -1,0 +1,35 @@
+@use "@carbon/react" with (
+  $font-path: "@ibm/plex"
+);
+@use '@carbon/grid';
+@use '@carbon/type';
+@use '@carbon/colors';
+@use '@carbon/themes';
+// Include type reset
+@include type.reset();
+// Include default type styles, targets h1, h2, h3, etc
+@include type.default-type();
+// Include utility classes for type-related properties
+@include type.type-classes();
+// Emit the flex-grid styles
+@include grid.flex-grid();
+
+@import "./components/types.scss";
+@import "./components/buttons.scss";
+@import "./components/cards.scss";
+@import "./components/containers.scss";
+@import "./components/notification.scss";
+@import "./components/tables.scss";
+@import "./components/images.scss";
+@import "./components/loading.scss";
+
+.mt-1 {
+  margin-top: 1rem;
+}
+
+.between {
+  display: flex;
+    align-content: space-between;
+    justify-content: space-between;
+}
+

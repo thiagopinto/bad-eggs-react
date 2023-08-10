@@ -1,0 +1,15 @@
+.table-actions {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+
+  .cds--inline-loading {
+    display: flex;
+    width: 100%;
+    min-height: 2rem;
+    align-items: center;
+    align-content: space-between;
+    justify-content: space-around;
+  }
+}
+
