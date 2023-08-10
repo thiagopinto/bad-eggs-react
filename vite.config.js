@@ -6,10 +6,10 @@ dotenv.config();
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => {
   return {
-    define: { 
-      process: { 
-        env: {...process.env,  ...loadEnv(mode, process.cwd(), '')} 
-      } 
+    define: {
+      process: {
+        env: { ...process.env, ...loadEnv(mode, process.cwd(), "") },
+      },
     },
     plugins: [react()],
     root: "./",
@@ -17,6 +17,5 @@ export default defineConfig(({ mode }) => {
       outDir: "dist",
     },
     base: "/eggs/",
-    publicDir: "public"
   };
 });
