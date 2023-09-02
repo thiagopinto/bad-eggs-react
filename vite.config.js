@@ -16,6 +16,6 @@ export default defineConfig(({ mode }) => {
     build: {
       outDir: "dist",
     },
-    base: "/eggs/",
+    base: process.env.BASE_NAME,
   };
 });
