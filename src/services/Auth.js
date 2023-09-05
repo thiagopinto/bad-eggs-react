@@ -3,7 +3,7 @@ import { request, updateRequest } from ".";
 class Auth {
   login = async (credencitais) => {
     try {
-      const payload = await request.post("/auth/login/", credencitais);
+      const payload = await request.post("/auth/login", credencitais);
       this.setCredentials(payload);
       updateRequest();
       return payload;
@@ -24,7 +24,7 @@ class Auth {
     formData.append("refresh_token", refresh_token);
 
     try {
-      const payload = await request.post("/auth/refresh/", formData);
+      const payload = await request.post("/auth/refresh", formData);
       this.setCredentials(payload);
       return true;
     } catch (error) {

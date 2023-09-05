@@ -1,5 +1,5 @@
 import { request } from ".";
-const url = "/ovitrampas/images/";
+const url = "/ovitrampas/images";
 
 class Image {
   create = async (image) => {
@@ -14,7 +14,7 @@ class Image {
   };
 
   show = async (id) => {
-    const payload = await request.get(`${url}${id}/`);
+    const payload = await request.get(`${url}/${id}`);
     return await payload;
   };
 
@@ -22,12 +22,12 @@ class Image {
     const id = image.id;
     delete image.id;
 
-    const payload = await request.put(`${url}${id}/`, image);
+    const payload = await request.put(`${url}/${id}`, image);
     return await payload;
   };
 
   delete = async (id) => {
-    const payload = await request.delete(`${url}${id}/`);
+    const payload = await request.delete(`${url}/${id}`);
     return await payload;
   };
 }
