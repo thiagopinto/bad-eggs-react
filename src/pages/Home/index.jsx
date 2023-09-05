@@ -129,7 +129,7 @@ export default function index() {
                 </p>
               </main>
               <footer>
-                <Button kind="secondary">Ir para Galeria</Button>
+                {/* <Button kind="secondary">Ir para Galeria</Button> */}
               </footer>
             </article>
           </Tile>

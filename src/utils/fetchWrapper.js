@@ -14,7 +14,7 @@ export const fetchWrapper = (options) => {
   const handleResponse = (response) => {
     return response.text().then((text) => {
       const data = text && JSON.parse(text);
-      
+
       if (!response.ok) {
         if (interceptor !== null) {
           interceptor(response);
@@ -29,13 +29,13 @@ export const fetchWrapper = (options) => {
   function request(method) {
     return async (url, body) => {
       const requestOptions = {
+        mode: "cors",
         method,
       };
       if (url != null) {
         url = urlBase + url;
       }
       requestOptions.headers = {
-        mode: "cors",
         // "Content-Type": "application/json",
         // 'Content-Type': 'application/x-www-form-urlencoded',
       };
@@ -52,9 +52,8 @@ export const fetchWrapper = (options) => {
           requestOptions.headers["Content-Type"] = "application/json";
           requestOptions.body = JSON.stringify(body);
         }
-        
       }
-        
+
       return await fetch(url, requestOptions).then(handleResponse);
     };
   }
