@@ -1,5 +1,5 @@
 import { request } from ".";
-const url = "/saads";
+const url = "/saads/";
 
 class Saad {
   list = async () => {

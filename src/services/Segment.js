@@ -1,5 +1,5 @@
 import { request } from ".";
-const url = "/ovitrampas/segments";
+const url = "/ovitrampas/segments/";
 
 class Segment {
   create = async (segment) => {
@@ -14,7 +14,7 @@ class Segment {
   };
 
   show = async (id) => {
-    const payload = await request.get(`${url}/${id}`);
+    const payload = await request.get(`${url}${id}`);
     return await payload;
   };
 
@@ -22,12 +22,12 @@ class Segment {
     const id = segment.id;
     delete segment.id;
 
-    const payload = await request.put(`${url}/${id}`, segment);
+    const payload = await request.put(`${url}${id}`, segment);
     return await payload;
   };
 
   delete = async (id) => {
-    const payload = await request.delete(`${url}/${id}`);
+    const payload = await request.delete(`${url}${id}`);
     return await payload;
   };
 }

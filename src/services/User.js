@@ -1,5 +1,5 @@
 import { request } from ".";
-const url = "/users";
+const url = "/users/";
 
 class User {
   create = async (user) => {
@@ -14,17 +14,17 @@ class User {
   };
 
   show = async (id) => {
-    const payload = await request.get(`${url}/${id}`);
+    const payload = await request.get(`${url}${id}`);
     return await payload;
   };
 
   update = async (user) => {
-    const payload = await request.put(`${url}/${user.id}`);
+    const payload = await request.put(`${url}${user.id}`);
     return await payload;
   };
 
   delete = async (id) => {
-    const payload = await request.delete(`${url}/${id}`);
+    const payload = await request.delete(`${url}${id}`);
     return await payload;
   };
 }
